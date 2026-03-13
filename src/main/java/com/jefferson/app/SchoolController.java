@@ -10,27 +10,20 @@ import java.util.stream.Collectors;
 
 @RestController
 public class SchoolController {
-    private final SchoolRepository schoolRepository;
 
-    public SchoolController(SchoolRepository schoolRepository) {
-        this.schoolRepository = schoolRepository;
+    public final SchoolService schoolService;
+
+    public SchoolController(SchoolService schoolService) {
+        this.schoolService = schoolService;
     }
 
     @PostMapping("/schools")
     public School create(@RequestBody School school) {
-        return schoolRepository.save(school);
-    }
-
-
-    private SchoolDto toschoolDto(School school) {
-        return new SchoolDto(school.getSchoolName());
+        return schoolService.saveSchool(school);
     }
 
     @GetMapping("/schools")
     public List<SchoolDto> findAllSchools() {
-        return schoolRepository.findAll()
-                .stream()
-                .map(this::toschoolDto)
-                .collect(Collectors.toList());
+
     }
 }
