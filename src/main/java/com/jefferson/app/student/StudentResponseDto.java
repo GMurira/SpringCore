@@ -1,4 +1,4 @@
-package com.jefferson.app;
+package com.jefferson.app.student;
 
 public record StudentResponseDto(
         String firstName,

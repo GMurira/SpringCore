@@ -1,5 +1,6 @@
-package com.jefferson.app;
+package com.jefferson.app.student;
 
+import com.jefferson.app.school.School;
 import org.springframework.stereotype.Service;
 
 /**

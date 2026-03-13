@@ -1,6 +1,8 @@
-package com.jefferson.app;
+package com.jefferson.app.student;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.jefferson.app.school.School;
+import com.jefferson.app.studentprofile.StudentProfile;
 import jakarta.persistence.*;
 
 @Entity

@@ -1,6 +1,7 @@
-package com.jefferson.app;
+package com.jefferson.app.school;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.jefferson.app.student.Student;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;

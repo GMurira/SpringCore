@@ -1,4 +1,4 @@
-package com.jefferson.app;
+package com.jefferson.app.school;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

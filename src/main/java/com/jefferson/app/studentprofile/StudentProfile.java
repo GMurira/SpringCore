@@ -1,5 +1,6 @@
-package com.jefferson.app;
+package com.jefferson.app.studentprofile;
 
+import com.jefferson.app.student.Student;
 import jakarta.persistence.*;
 
 @Entity

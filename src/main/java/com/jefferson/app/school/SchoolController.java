@@ -1,4 +1,4 @@
-package com.jefferson.app;
+package com.jefferson.app.school;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 public class SchoolController {
@@ -24,6 +23,6 @@ public class SchoolController {
 
     @GetMapping("/schools")
     public List<SchoolDto> findAllSchools() {
-
+        return schoolService.findAllSchools();
     }
 }

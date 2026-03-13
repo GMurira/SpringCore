@@ -1,4 +1,4 @@
-package com.jefferson.app;
+package com.jefferson.app.school;
 
 import org.springframework.stereotype.Service;
 
@@ -7,5 +7,4 @@ public class SchoolMapper {
     public SchoolDto toschoolDto(School school) {
         return new SchoolDto(school.getSchoolName());
     }
-
 }
