@@ -1,5 +1,6 @@
 package com.jefferson.app;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -13,6 +14,29 @@ public class Student {
     @Column(unique = true)
     private String email;
     private int age;
+
+    @OneToOne(mappedBy = "student", cascade = CascadeType.ALL)
+    private StudentProfile studentProfile;
+    @ManyToOne
+    @JoinColumn(name = "school_id")
+    @JsonBackReference
+    private School school;
+
+    public StudentProfile getStudentProfile() {
+        return studentProfile;
+    }
+
+    public void setStudentProfile(StudentProfile studentProfile) {
+        this.studentProfile = studentProfile;
+    }
+
+    public School getSchool() {
+        return school;
+    }
+
+    public void setSchool(School school) {
+        this.school = school;
+    }
 
     public Student() {
     }

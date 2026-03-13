@@ -1,4 +1,6 @@
 package com.jefferson.app;
 
-public interface SchoolRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface SchoolRepository extends JpaRepository<School, Integer> {
 }
